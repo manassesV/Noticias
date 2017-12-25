@@ -11,23 +11,25 @@ class NoticiasRequest extends FormRequest {
      *
      * @return bool
      */
-    public function authorize()
-    {
-        return true;
-    }
+    public function authorize() {
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
-    public function rules() 
-    {
-        return [
-            'titulo' => 'required|max:50|min:10',
-            'sub_titulo' => 'required|max:100|min:10',
-            'descricao' => 'required|max:500|min:10'
-        ];
+        if (auth()->check()){
+            return true;
+        }
+
+}
+
+/**
+ * Get the validation rules that apply to the request.
+ *
+ * @return array
+ */
+public function rules() {
+    return [
+        'titulo' => 'required|max:50|min:10',
+        'sub_titulo' => 'required|max:100|min:10',
+        'descricao' => 'required|max:500|min:10'
+    ];
     }
 
     /**
@@ -35,8 +37,7 @@ class NoticiasRequest extends FormRequest {
      * 
      * @return array of message
      */
-    public function messages() 
-    {
+    public function messages() {
         return[
             'titulo.required' => 'Campo título é requerido',
             'titulo.max' => 'Campo título deve ter menos que 50 caracteres',

@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
              return "<?php echo 'Hello ' . {$expression}; ?>";
         });
         
-        app()->bind(App\Manipular\NoticiasManipular::class,App\Manipular\Metodos::class);
+     
     }
 
     /**
@@ -32,6 +32,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+           
+        $this->app->bind('App\Manipular\Metodos','App\Manipular\NoticiasManipular');
     }
 }
