@@ -21,7 +21,7 @@ class NoticiasController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        return view()->make('noticias.principal');
+        return view('noticias.principal');
     }
 
     /**
@@ -40,7 +40,10 @@ class NoticiasController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(NoticiasRequest $request) {
-        $this->metodos->store($request);
+        if($this->metodos->store($request))
+        {
+            return redirect()->route('noticias.create');
+        }
     }
 
     /**
