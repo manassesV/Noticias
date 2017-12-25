@@ -43,9 +43,7 @@ class NoticiasController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(NoticiasRequest $request) {
-        $this->metodos
-             ->store($request->only
-                    ('titulo','sub_titulo','descricao','image'));
+        $this->metodos->store($request);
     }
 
     /**

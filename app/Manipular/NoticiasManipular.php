@@ -2,8 +2,6 @@
 
 namespace App\Manipular;
 
-use App\Model\Noticias;
-use Illuminate\Database\Eloquent\Collection;
 
 /**
  * Here manipule the notice the send fob bank of dates
@@ -12,27 +10,26 @@ use Illuminate\Database\Eloquent\Collection;
  */
 class NoticiasManipular implements Metodos {
 
-    protected $noticias;
+          
+   
 
-    public function __construct(Noticias $noticias) {
-        $this->noticias = $noticias;
+   
+    public function store($request)
+    {
+         $noticias = app()->make('App\Model\Noticias');
+         
+         $dados = collect($request->only('titulo','sub_titulo','descricao','user_id'));
+         $dados->prepend(auth()->id(),'user_id');
+   
+         
+        if (auth()->check()) {            
+         $noticias->
+                create($dados->all());
+         
+            return redirect()->back();
+        }  
     }
-
-    public function store(array $dados) {
-
-        $dates = collect($dados);
-
-        $dates->prepend(auth()->id(), "user_id");
-        $dates->pull('image');
-        
-        //dd($dates);
-
-
-
-        if (auth()->check()) {
-            $this->noticias->save($dates->values()->to7);
-            return redirect()->route('noticias.create');
-        }
-    }
+    
+   
 
 }

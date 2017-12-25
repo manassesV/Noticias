@@ -9,5 +9,5 @@ namespace App\Manipular;
  */
 interface Metodos {
 
-    public function store(array $array);
+    public function store($request);
 }
