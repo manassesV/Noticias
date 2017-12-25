@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-fluid">
-    {!! Form::open(['method' => 'post','route' => 'noticias.store', 'class' => 'form-horizontal','files' => true]) !!}
+    {!! Form::open(['route' => 'noticias.store', 'class' => 'form-horizontal','files' => true]) !!}
     <!-- Titulo -->
     <div class="form-group">
         {!! Form::label('tit', 'Título:', ['class' => 'col-lg-2 control-label']) !!}

@@ -26,7 +26,7 @@ class NoticiasManipular implements Metodos {
          $noticias->
                 create($dados->all());
          
-            return redirect()->back();
+            return redirect()->route('noticias.index');
         }  
     }
     

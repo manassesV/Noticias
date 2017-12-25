@@ -17,4 +17,8 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
 
+Artisan::command('make:user', function (){   
+    factory(App\User::class,10);
+})->describe('Command for create users automatic');
+
 

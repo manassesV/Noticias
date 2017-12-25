@@ -30,7 +30,8 @@ public function rules() {
     return [
         'titulo' => 'required|max:50|min:10',
         'sub_titulo' => 'required|max:100|min:10',
-        'descricao' => 'required|max:500|min:10'
+        'descricao' => 'required|max:500|min:10',
+        'image' =>  'required|dimensions:min_width=100,max_width=1000|mimes:jpg,jpeg,png,bmp'
     ];
     }
 
@@ -50,6 +51,8 @@ public function rules() {
             'descricao.required' => 'Campo descrição é requerido',
             'descricao.max' => 'Campo descrição deve ter menos que 500 caracteres',
             'descricao.min' => 'Campo descrição deve ter mais que 10 caracteres',
+            'image.required' => 'Campo imagem requerido',
+            'image.dimensions' => 'Minimo width é 200 eo máximo width é 600'
         ];
     }
 
