@@ -4,15 +4,15 @@
 @section('content')
 <section class="container">
     <header>
-        <a href="{{route('noticias.create')}}" class="btn btn-primary">Nova <span class="icon icon-next"></a>
+        <a href="{{route('noticias.create')}}" class="btn btn-primary">Nova<span class="icon icon-next"></span></a>
     </header>
-    <table class="table-bordered">
+    <table class="table-bordered" id="example">
         <thead>
             <tr>
-                <th scope="col">Titulo</th>
-                <th scope="col">Sub_titulo</th>
-                <th scope="col">Texto</th>
-                <th scope="col">X</th>
+                <th>Titulo</th>
+                <th>Sub_titulo</th>
+                <th>Texto</th>
+                <th>X</th>
             </tr>
         </thead>
         <tbody>
@@ -21,8 +21,11 @@
 
                 <td>{{$posts->titulo}}</td>
                 <td>{{$posts->sub_titulo}}</td>
-                <td>{{$posts->texto}}</td>
-                <td><a>Inativar</a></td>
+                <td>{{$posts->descricao}}</td>
+                <td>{{ Form::open(['route' => ['noticias.destroy', $posts->id], 'method' => 'delete']) }}
+                      <button type="submit"><span class="glyphicon glyphicon-remove"></span></button>
+                    {{ Form::close() }}
+                </td>
             </tr>
             @endforeach
         </tbody>

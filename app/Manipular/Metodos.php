@@ -10,4 +10,5 @@ namespace App\Manipular;
 interface Metodos {
 
     public function store($request);
+    public function delete($id);
 }

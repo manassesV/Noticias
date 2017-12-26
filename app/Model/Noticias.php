@@ -9,6 +9,6 @@ class Noticias extends Model
 //    protected $primaryKey = ['id'];
 //    protected $autoincrement = true;
     protected $guarded = ['id'];
-    protected $fillable = ['titulo','sub_titulo','descricao','user_id','image'];
+    protected $fillable = ['titulo','sub_titulo','descricao','user_id','image','status'];
     protected $hidden = ['id','user_id'];
 }
