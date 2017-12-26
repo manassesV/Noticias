@@ -18,7 +18,10 @@ Artisan::command('inspire', function () {
 })->describe('Display an inspiring quote');
 
 Artisan::command('make:user', function (){   
-    factory(App\User::class,10);
+     factory(App\User::class)->create();
+     
+     $Dados = $this->ask('What is your name?');
+     $this->info('I loved'.$Dados);
 })->describe('Command for create users automatic');
 
 

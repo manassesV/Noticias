@@ -18,6 +18,7 @@ class CreateNoticiasTable extends Migration
             $table->string('titulo',50);
             $table->string('sub_titulo',100);
             $table->string('descricao',500);
+            $table->string('image')->default('default.jpg');
             $table->boolean('status');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('users')->on('id');
