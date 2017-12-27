@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Foundation\Inspiring;
 
 /*
@@ -17,11 +16,9 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
 
-Artisan::command('make:user', function (){   
-     factory(App\User::class)->create();
-     
-     $Dados = $this->ask('What is your name?');
-     $this->info('I loved'.$Dados);
+Artisan::command('user', function (){   
+     $this->call(Database\Seeds\UsersTableSeeder::class);
+    
 })->describe('Command for create users automatic');
 
 
