@@ -3,6 +3,7 @@
 namespace Noticias\Manipular;
 
 use Noticias\Model\Noticias;
+use Intervention\Image\ImageManagerStatic as Image;
 
 /**
  * Here manipule the notice the send fob bank of dates
@@ -24,11 +25,14 @@ class NoticiasManipular implements Metodos {
 
 
         if (auth()->check()) {
-            if ($request->file('image')) {
+            if ($request->hasFile('image')) {
+               $image = $request->file('image');
+               $filename = time().'.'.$image->getClientOriginalExtension();
+               Image::make($image)->resize(300,300)->save(public_path('uploads/noticias/'.$filename));
                 
+               $dados->prepend($filename,'imagens');
                 
-                
-                $this->noticias->create($dados->all());
+               $this->noticias->create($dados->all());
 
                 return true;
             }
