@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Manipular;
+namespace Noticias\Manipular;
 
 /**
  *

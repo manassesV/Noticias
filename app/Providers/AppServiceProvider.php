@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Noticias\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
     {
         
         //Compartilhar dados com umaview
-        view()->composer(['noticias.create','noticias.principal'],\App\Http\ViewComposers\NoticiasComposer::class);
+        view()->composer(['noticias.create','noticias.principal'],\Noticias\Http\ViewComposers\NoticiasComposer::class);
     
         Blade::directive('ifguest', function ($expression){
              return "<?php echo 'Hello ' . {$expression}; ?>";
@@ -33,6 +33,6 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
            
-        $this->app->bind('App\Manipular\Metodos','App\Manipular\NoticiasManipular');
+        $this->app->bind('Noticias\Manipular\Metodos','Noticias\Manipular\NoticiasManipular');
     }
 }

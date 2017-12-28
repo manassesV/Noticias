@@ -1,8 +1,8 @@
 <?php
-namespace App\Http\Controllers;
+namespace Noticias\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Http\Requests\NoticiasRequest;
-use App\Manipular\Metodos;
+use Noticias\Http\Requests\NoticiasRequest;
+use Noticias\Manipular\Metodos;
 
 
 class NoticiasController extends Controller {
@@ -21,7 +21,7 @@ class NoticiasController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        return view('noticias.principal');
+        return view()->make('noticias.principal');
     }
 
     /**
@@ -42,7 +42,7 @@ class NoticiasController extends Controller {
     public function store(NoticiasRequest $request) {
         if($this->metodos->store($request))
         {
-            return redirect()->route('noticias.create');
+            return redirect()->route('noticias.index');
         }
     }
 

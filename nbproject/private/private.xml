@@ -3,20 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp6489999/www/Noticias/app/Model/Noticias.php</file>
-            <file>file:/C:/wamp6489999/www/Noticias/config/app.php</file>
-            <file>file:/C:/wamp6489999/www/Noticias/resources/assets/js/components/Example.vue</file>
-            <file>file:/C:/wamp6489999/www/Noticias/resources/views/layouts/app.blade.php</file>
-            <file>file:/C:/wamp6489999/www/Noticias/composer.json</file>
-            <file>file:/C:/wamp6489999/www/Noticias/resources/assets/js/bootstrap.js</file>
-            <file>file:/C:/wamp6489999/www/Noticias/app/Manipular/Metodos.php</file>
+            <file>file:/C:/wamp6489999/www/Noticias/database/migrations/2014_10_12_000000_create_users_table.php</file>
             <file>file:/C:/wamp6489999/www/Noticias/app/Http/Controllers/NoticiasController.php</file>
+            <file>file:/C:/wamp6489999/www/Noticias/database/seeds/DatabaseSeeder.php</file>
             <file>file:/C:/wamp6489999/www/Noticias/database/factories/ModelFactory.php</file>
-            <file>file:/C:/wamp6489999/www/Noticias/resources/assets/js/app.js</file>
+            <file>file:/C:/wamp6489999/www/Noticias/database/seeds/UsersTableSeeder.php</file>
+            <file>file:/C:/wamp6489999/www/Noticias/app/Model/Noticias.php</file>
             <file>file:/C:/wamp6489999/www/Noticias/routes/console.php</file>
             <file>file:/C:/wamp6489999/www/Noticias/resources/views/noticias/principal.blade.php</file>
             <file>file:/C:/wamp6489999/www/Noticias/database/migrations/2017_12_22_022607_create_noticias_table.php</file>
-            <file>file:/C:/wamp6489999/www/Noticias/app/Http/Requests/NoticiasRequest.php</file>
+            <file>file:/C:/wamp6489999/www/Noticias/resources/views/layouts/app.blade.php</file>
+            <file>file:/C:/wamp6489999/www/Noticias/routes/api.php</file>
             <file>file:/C:/wamp6489999/www/Noticias/app/Manipular/NoticiasManipular.php</file>
         </group>
     </open-files>

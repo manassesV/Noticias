@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Manipular;
+namespace Noticias\Manipular;
 
-use App\Model\Noticias;
+use Noticias\Model\Noticias;
 
 /**
  * Here manipule the notice the send fob bank of dates
@@ -25,8 +25,7 @@ class NoticiasManipular implements Metodos {
 
         if (auth()->check()) {
             if ($request->file('image')) {
-                $image = $request->file('image');
-                $name = time().'.'.$image->getClientOriginalExtension();
+                
                 
                 
                 $this->noticias->create($dados->all());

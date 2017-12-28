@@ -25,7 +25,7 @@
                 <td>{{$posts->descricao}}</td>
                 <td><img src="{{ asset('uploads/noticias/'.$posts->image) }}" style="width:100px;height:100px;"></td>
                 <td>{{ Form::open(['route' => ['noticias.destroy', $posts->id], 'method' => 'delete']) }}
-                      <button type="submit"><span class="glyphicon glyphicon-remove"></span></button>
+                    <button type="submit"><span class="glyphicon glyphicon-remove"></span></button>
                     {{ Form::close() }}
                 </td>
             </tr>

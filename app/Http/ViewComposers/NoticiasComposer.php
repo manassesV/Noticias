@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\ViewComposers;
+namespace Noticias\Http\ViewComposers;
 
-use App\Model\Noticias;
+use Noticias\Model\Noticias;
 use Illuminate\Contracts\View\View;
 
 /*
