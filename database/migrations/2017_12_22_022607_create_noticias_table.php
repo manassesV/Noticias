@@ -22,6 +22,7 @@ class CreateNoticiasTable extends Migration
             $table->boolean('status');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('users')->on('id');
+            $table->softDeletesTz();
             $table->timestamps();
         });
     }
